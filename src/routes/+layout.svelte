@@ -12,7 +12,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<div class="mx-auto flex justify-evenly {sharedWidths}">
+<div class="mx-auto flex justify-evenly {sharedWidths} my-3">
 	<a href={homePage}>Homepage</a>
 	<a href={resumePage}>Resume Page</a>
 </div>

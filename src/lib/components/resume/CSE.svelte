@@ -7,7 +7,7 @@
 </script>
 
 <!-- Title -->
-<button type="button" onclick={swapToggle} >
+<button type="button" onclick={swapToggle}>
 	<p>
 		<strong>Computer Systems Engineer, Lawrence Berkeley National Laboratory</strong>
 	</p>
