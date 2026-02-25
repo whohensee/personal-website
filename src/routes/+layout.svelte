@@ -17,3 +17,12 @@
 	<a href={resumePage}>Resume Page</a>
 </div>
 {@render children()}
+
+<style>
+	@import 'tailwindcss';
+
+	:global(body) {
+		background-color: var(--color-gray-400);
+		min-width: 320px;
+	}
+</style>

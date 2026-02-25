@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { sharedWidths } from '$lib/scripts/sharedVariables.svelte';
+	import { content_box_styling, sharedWidths } from '$lib/scripts/sharedVariables.svelte';
 </script>
 
-<div class="flex flex-col items-center gap-2 {sharedWidths}">
+<div class="flex flex-col items-center gap-2 {sharedWidths} {content_box_styling} text-center">
 	<h1>Hi, I'm William</h1>
 	<p>
 		I'm a software developer, systems engineer, and astrophysicist located in the Bay Area, CA.
