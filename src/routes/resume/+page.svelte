@@ -3,6 +3,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import PostBac from '$lib/components/resume/PostBac.svelte';
 	import StudentResearcher from '$lib/components/resume/StudentResearcher.svelte';
+	import { sharedWidths } from '$lib/scripts/sharedVariables.svelte';
 
 	let toggled = $state(false);
 
@@ -11,7 +12,7 @@
 	}
 </script>
 
-<div class="flex flex-col items-center gap-3">
+<div class="flex flex-col items-center gap-3 {sharedWidths} mx-auto">
 	<Header />
 
 	<button type="button" onclick={swapToggled}>

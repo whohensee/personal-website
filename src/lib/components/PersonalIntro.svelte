@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { sharedWidths } from '$lib/scripts/sharedVariables.svelte';
 </script>
 
-<div class="flex w-sm flex-col items-center gap-3 lg:w-lg">
+<div class="flex flex-col items-center gap-3 {sharedWidths}">
 	<p>
 		I'm a software developer, systems engineer, and astrophysicist located in the Bay Area, CA.
 		After graduating from UC Berkeley, where I studied Astrophysics and Computer Science, I've been
