@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { content_box_styling, sharedWidths } from '$lib/scripts/sharedVariables.svelte';
+	import { sharedWidths } from '$lib/scripts/sharedVariables.svelte';
 	import type { content_types } from '$lib/types';
 	import ForEmployers from './ForEmployers.svelte';
 	import PersonalIntro from './PersonalIntro.svelte';
@@ -9,9 +9,9 @@
 	let current_content: content_types = $state('ForEmployers');
 </script>
 
-<div class="mainbox flex flex-col">
+<div class="mainbox flex flex-col {sharedWidths}">
 	<!-- consider making this navbar semantically correct -->
-	<div class="navbar flex justify-around">
+	<div class="navbar flex flex-wrap justify-around gap-1">
 		{@render navbarItem('About Me', 'PersonalIntro')}
 		{@render navbarItem('For Employers', 'ForEmployers')}
 		{@render navbarItem('My Work', 'ProfessionalWork')}
