@@ -24,5 +24,11 @@
 	:global(body) {
 		background-color: var(--color-gray-400);
 		min-width: 320px;
+		font-family: 'Source Sans 3';
+	}
+
+	@font-face {
+		font-family: 'Source Sans 3';
+		src: url('/SourceSans3-VariableFont_wght.ttf');
 	}
 </style>
