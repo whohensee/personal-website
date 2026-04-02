@@ -9,9 +9,9 @@
 	import { assign_content, get_current_content } from '$lib/scripts/state.svelte';
 </script>
 
-<div class="mainbox flex flex-col {sharedWidths}">
+<div class="mainbox flex flex-col {sharedWidths} rounded-md bg-gray-200">
 	<!-- consider making this navbar semantically correct -->
-	<div class="navbar flex flex-wrap justify-around gap-1">
+	<div class="navbar flex flex-wrap justify-around gap-1 bg-gray-300">
 		{@render navbarItem('About Me', 'PersonalIntro')}
 		{@render navbarItem('For Employers', 'ForEmployers')}
 		{@render navbarItem('My Work', 'ProfessionalWork')}
@@ -30,6 +30,9 @@
 
 {#snippet navbarItem(text: string, current_content_value: content_types)}
 	<button
+		class="p-1 hover:bg-gray-100 {get_current_content() == current_content_value
+			? 'bg-gray-100'
+			: ''}"
 		onclick={() => {
 			assign_content(current_content_value);
 		}}

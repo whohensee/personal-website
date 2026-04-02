@@ -14,12 +14,12 @@
 	});
 </script>
 
-<div class="flex flex-col items-center {sharedWidths} text-center">
+<div class="flex flex-col items-center justify-center {sharedWidths} h-50 text-center">
 	<h1>{h1_value}</h1>
 	{#if get_current_content() == 'PersonalIntro'}
 		<h1>William Hohensee</h1>
-		<p>B.A Astrophysics, University of California Berkeley</p>
-		<p>Software Developer, Systems Engineer, Astrophysicist</p>
+		<p class="mb-1">B.A Astrophysics, UC Berkeley</p>
+		<p>Software Engineer, Web Developer, Astrophysicist</p>
 		<p>email@emailadrress.edu</p>
 	{:else if get_current_content() == 'ForEmployers'}
 		{@render personalDetails()}
