@@ -6,7 +6,7 @@
 	import PersonalProjects from './PersonalProjects.svelte';
 	import ProfessionalWork from './ProfessionalWork.svelte';
 
-	let current_content: content_types = $state('ForEmployers');
+	import { assign_content, get_current_content } from '$lib/scripts/state.svelte';
 </script>
 
 <div class="mainbox flex flex-col {sharedWidths}">
@@ -17,13 +17,13 @@
 		{@render navbarItem('My Work', 'ProfessionalWork')}
 		{@render navbarItem('My Projects', 'PersonalProjects')}
 	</div>
-	{#if current_content == 'ForEmployers'}
+	{#if get_current_content() == 'ForEmployers'}
 		<ForEmployers />
-	{:else if current_content == 'PersonalIntro'}
+	{:else if get_current_content() == 'PersonalIntro'}
 		<PersonalIntro />
-	{:else if current_content == 'ProfessionalWork'}
+	{:else if get_current_content() == 'ProfessionalWork'}
 		<ProfessionalWork />
-	{:else if current_content == 'PersonalProjects'}
+	{:else if get_current_content() == 'PersonalProjects'}
 		<PersonalProjects />
 	{/if}
 </div>
@@ -31,7 +31,7 @@
 {#snippet navbarItem(text: string, current_content_value: content_types)}
 	<button
 		onclick={() => {
-			current_content = current_content_value;
+			assign_content(current_content_value);
 		}}
 	>
 		{text}
