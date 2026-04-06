@@ -1,10 +1,9 @@
 <script lang="ts">
-	import ForEmployers from '$lib/components/ForEmployers.svelte';
-	import PersonalIntro from '$lib/components/PersonalIntro.svelte';
+	import IntroBox from '$lib/components/IntroBox.svelte';
+	import MainContent from '$lib/components/MainContent.svelte';
 </script>
 
 <div class="flex flex-col items-center gap-5">
-	<PersonalIntro />
-
-	<ForEmployers />
+	<IntroBox />
+	<MainContent />
 </div>
