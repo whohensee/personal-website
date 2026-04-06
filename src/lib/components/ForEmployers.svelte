@@ -6,14 +6,13 @@
 		mainbox_p_styling
 	} from '$lib/scripts/sharedVariables.svelte';
 
-	import { resolve } from '$app/paths';
-	const resumeLink = resolve('/resume');
+	import { assign_content } from '$lib/scripts/state.svelte';
 </script>
 
 <div class="flex flex-col items-center {sharedWidths} gap-2 {content_box_styling} text-center">
 	<div class="flex items-center gap-2">
-		<a href={resumeLink} target="_blank" class="{button_styling} bg-blue-400 text-lg"
-			>Check out my Resume</a
+		<button onclick={() => assign_content('Resume')} class="{button_styling} bg-blue-400 text-lg"
+			>Check out my Resume</button
 		>
 		<a
 			href="https://github.com/whohensee"
