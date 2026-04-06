@@ -7,6 +7,7 @@
 	import ProfessionalWork from './ProfessionalWork.svelte';
 
 	import { assign_content, get_current_content } from '$lib/scripts/state.svelte';
+	import Resume from './Resume.svelte';
 </script>
 
 <div class="mainbox flex flex-col {sharedWidths} rounded-md bg-gray-200">
@@ -16,6 +17,7 @@
 		{@render navbarItem('For Employers', 'ForEmployers')}
 		{@render navbarItem('My Work', 'ProfessionalWork')}
 		{@render navbarItem('My Projects', 'PersonalProjects')}
+		{@render navbarItem('Resume', 'Resume')}
 	</div>
 	{#if get_current_content() == 'ForEmployers'}
 		<ForEmployers />
@@ -25,6 +27,8 @@
 		<ProfessionalWork />
 	{:else if get_current_content() == 'PersonalProjects'}
 		<PersonalProjects />
+	{:else if get_current_content() == 'Resume'}
+		<Resume />
 	{/if}
 </div>
 

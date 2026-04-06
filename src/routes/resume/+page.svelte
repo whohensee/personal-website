@@ -1,8 +1,8 @@
 <script lang="ts">
-	import CSE from '$lib/components/resume/CSE.svelte';
+	import CSE from '$lib/components/resume/employment/CSE.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import PostBac from '$lib/components/resume/PostBac.svelte';
-	import StudentResearcher from '$lib/components/resume/StudentResearcher.svelte';
+	import PostBac from '$lib/components/resume/employment/PostBac.svelte';
+	import StudentResearcher from '$lib/components/resume/employment/StudentResearcher.svelte';
 	import { content_box_styling, sharedWidths } from '$lib/scripts/sharedVariables.svelte';
 
 	let toggled = $state(false);

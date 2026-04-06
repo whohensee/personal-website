@@ -6,7 +6,8 @@
 		PersonalIntro: '',
 		ForEmployers: 'Prospective Employers and Professors',
 		ProfessionalWork: 'Professional Work',
-		PersonalProjects: 'Personal Projects'
+		PersonalProjects: 'Personal Projects',
+		Resume: 'Resume'
 	};
 
 	let h1_value = $derived.by(() => {
@@ -26,6 +27,8 @@
 	{:else if get_current_content() == 'ProfessionalWork'}
 		{@render personalDetails()}
 	{:else if get_current_content() == 'PersonalProjects'}
+		{@render personalDetails()}
+	{:else if get_current_content() == 'Resume'}
 		{@render personalDetails()}
 	{/if}
 </div>
