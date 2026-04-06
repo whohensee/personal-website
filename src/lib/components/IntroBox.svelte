@@ -18,7 +18,7 @@
 	<h1>{h1_value}</h1>
 	{#if get_current_content() == 'PersonalIntro'}
 		<h1>William Hohensee</h1>
-		<p class="mb-1">B.A Astrophysics, UC Berkeley</p>
+		<p class="mb-1">B.A. Astrophysics, UC Berkeley</p>
 		<p>Software Engineer, Web Developer, Astrophysicist</p>
 		<p>email@emailadrress.edu</p>
 	{:else if get_current_content() == 'ForEmployers'}
