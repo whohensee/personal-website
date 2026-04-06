@@ -10,4 +10,12 @@ const button_styling = 'w-fit rounded md border-solid border-black border-2 p-1'
 
 const mainbox_p_styling = 'text-lg md:text-xl';
 
-export { sharedWidths, content_box_styling, button_styling, mainbox_p_styling };
+const resume_font_styling = 'font-resume';
+
+export {
+	sharedWidths,
+	content_box_styling,
+	button_styling,
+	mainbox_p_styling,
+	resume_font_styling
+};
