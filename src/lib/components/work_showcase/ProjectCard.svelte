@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import type { validPaths } from '$lib/types';
-
 	interface Props {
 		project_title: string;
 		project_jobname: string;
 		project_date: string;
 		project_description: string;
 		has_link: boolean;
-		project_link: validPaths;
+		project_link: string;
+		link_text: string;
+		has_github: boolean;
+		github_link: string;
 	}
 
 	let {
@@ -17,7 +17,10 @@
 		project_date,
 		project_description,
 		has_link,
-		project_link
+		project_link,
+		link_text,
+		has_github,
+		github_link
 	}: Props = $props();
 </script>
 
@@ -31,13 +34,20 @@
 		{project_description}
 	</p>
 
-	{#if has_link}
-		<a href={resolve(project_link)}>
-			<button type="button" class="w-fit rounded-md border p-2 hover:bg-gray-100"
-				>View Details</button
-			>
-		</a>
-	{/if}
+	<div class="flex justify-center">
+		{#if has_link}
+			<a href={project_link} rel="external" target="_blank">
+				<button type="button" class="w-fit rounded-md border p-2 hover:bg-gray-100"
+					>{link_text}</button
+				>
+			</a>
+		{/if}
+		{#if has_github}
+			<a href={github_link} rel="external" target="_blank">
+				<button type="button" class="w-fit rounded-md border p-2 hover:bg-gray-100">Github</button>
+			</a>
+		{/if}
+	</div>
 </div>
 
 <style>
