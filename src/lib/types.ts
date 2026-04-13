@@ -4,3 +4,5 @@ export type content_types =
 	| 'ProfessionalWork'
 	| 'PersonalProjects'
 	| 'Resume';
+
+export type validPaths = '/';
