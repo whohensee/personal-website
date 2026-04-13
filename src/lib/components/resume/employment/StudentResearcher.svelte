@@ -18,7 +18,7 @@
 		{/if}
 		<strong>Student Researcher, Lawrence Berkeley National Laboratory</strong>
 	</p>
-	<p class="{resume_font_styling} text-base">June 2022 - Aug 2023</p>
+	<p class="{resume_font_styling} text-base">June 2021 - Aug 2022</p>
 	{#if toggled}
 		<p class="{resume_font_styling} text-base">
 			Full-time astrophysics research for MOSTHOSTS, a part of the DESI collaboration. Assembled and
