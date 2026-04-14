@@ -21,7 +21,7 @@
 		<h1>William Hohensee</h1>
 		<p class="mb-1">B.A. Astrophysics, UC Berkeley</p>
 		<p>Software Engineer, Web Developer, Astrophysicist</p>
-		<p>email@emailadrress.edu</p>
+		<p>wjhohensee37@berkeley.edu</p>
 	{:else if get_current_content() == 'ForEmployers'}
 		{@render personalDetails()}
 	{:else if get_current_content() == 'ProfessionalWork'}
