@@ -18,7 +18,7 @@
 		{/if}
 		<strong>Computer Systems Engineer, Lawrence Berkeley National Laboratory</strong>
 	</p>
-	<p class="{resume_font_styling} text-base">Dec 2023 - Aug 2024</p>
+	<p class="{resume_font_styling} text-base">Sept 2022 - Aug 2024</p>
 	{#if toggled}
 		<p class="{resume_font_styling} text-base">
 			Development work on dockerized software designed for deployment via podman and docker on the
