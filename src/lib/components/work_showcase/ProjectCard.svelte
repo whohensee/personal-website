@@ -34,7 +34,7 @@
 		{project_description}
 	</p>
 
-	<div class="flex justify-center">
+	<div class="flex justify-center gap-2">
 		{#if has_link}
 			<a href={project_link} rel="external" target="_blank">
 				<button type="button" class="w-fit rounded-md border p-2 hover:bg-gray-100"
