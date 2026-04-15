@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="case-study-styles.css" />
+    <title>Project: LS4</title>
+  </head>
+  <body>
+    <div class="navigation-bar">
+      <div class="content">
+        <p class="name">William Hohensee</p>
+        <div class="extra-content">
+          <div class="links">
+            <p><a href="./index.html#project-start">Projects</a></p>
+          </div>
+          <a href="mailto:wjhohensee37@berkeley.edu" class="button">Let's Work Together</a>
+        </div>
+      </div>
+    </div>
+    <div class="banner">
+        <img src="./img/LS4 Telescope.jpg" alt="">
+        <h1>Developing SeeChange, LS4</h1>
+    </div>
+    <div class="heading"><p>The Challenge</p></div>
+    <div class="textblock">
+      <p>
+        The La Silla Schmidt Southern Survey (LS4) is repurposing an old camera
+        with new LBNL deep-depletion well CCDs in order to monitor the night sky
+        searching for stellar explosions, stellar variables, and other
+        rapidly-changing objects. This involves repeatedly taking hundreds of
+        exposures each night, scanning and re-scanning the same parts of the
+        sky, searching for changes that might suggest a dynamic event.
+      </p>
+      <p>
+        As each exposure has 64 chips, each taking an image, this quickly
+        becomes a significant amount of data that must be processed each night.
+        Additionally, because these events can happen on rapid timescales such
+        that a discovery on one night might be significantly dimmed on the next,
+        a key component of the data processing is that it can be done at the
+        same cadence or faster as the survey, thus allowing us to send out
+        automated alerts of detections as they come in
+      </p>
+      <p>
+        Additionally, detailed records of each measurement must be kept that
+        allow future science to be run on the dataset as a whole. This means
+        that not only must the image data be stored, but also meticulous
+        information on the code versions used to process each data product, and
+        of course strict code-versioning must be implemented.
+      </p>
+      <p>
+        The full documentation for our solutions to these challenges can be
+        found at the SeeChange Documentation. For the remainder of this
+        document, I will focus on my technical contributions to the project.
+      </p>
+    </div>
+    <div class="heading"><p>My Role</p></div>
+    <div class="textblock">
+      <p>
+        I was brought in to the project as a Computer Systems Engineer I at
+        Lawrence Berkeley National Laboratory from February 2024 - October 2025
+        (about 20 months). We were a small team, with 3 (and later 2) primary
+        developers working with a number of additional collaborators that were
+        either making feature-requests or small modifications to features in the
+        codebase.
+      </p>
+      <p>
+        This means that I was required to become familiar with all parts of the
+        pipeline. The general pipeline structure was a largely Python codebase
+        interacting with a PostgreSQL relational database, controlled and
+        interacted-with via a Flask (Python/JavaScript) web application. As the
+        project was large with many moving parts, an important part of
+        development was keeping well-maintained tests using the Pytest testing
+        suite, including regression tests, end-to-end tests, and unit tests of
+        each individual object. Additionally, the whole thing was containerized
+        using Docker and Podman, so that it could be deployed on SPIN, the NERSC
+        CaaS platform.
+      </p>
+      <p>
+        My contributions were to all parts of the codebase. I was familiar with
+        and made significant contributions to:
+      </p>
+      <ul>
+        <li>
+          Python code relating to all data products, including creation of
+          multiple data products of my own.
+        </li>
+        <li>
+          The PostgreSQL database, including writing complex queries directly in
+          SQL with multiple JOINS and writing migrations using Alembic, a
+          companion migration-manager package to SQL Alchemy, the ORM that was
+          used for approximately 50% of database interaction (the rest being
+          pure SQL).
+        </li>
+        <li>
+          The Flask web application, using JavaScript and Python, designing and
+          implementing proper ways to display the data to users and maintainers
+          who need to control the pipeline.
+        </li>
+        <li>
+          Writing tests for under-tested portions of the code, often discovering
+          issues and implementing re-factors or corrections.
+        </li>
+        <li>
+          Code Review. All additions to the codebase during my 20 months of
+          employment were either written by me (and code reviewed by a
+          co-worker) or reviewed directly by me. This ensured that my knowledge
+          of the project was always up to date.
+        </li>
+      </ul>
+      <p>
+        In order to keep up with the rapid rate of data-collection, our pipeline
+        was run using clusters on NERSC, the LBNL supercomputer. Included in my
+        role was deploying, troubleshooting, and maintaining our pipeline on
+        NERSC, during which I successfully tested the pipeline by running it on
+        full datasets from previous surveys.
+      </p>
+    </div>
+    <div class="heading"><p>Conclusion</p></div>
+    <div class="textblock">
+      <p>
+        My position developing this pipeline ended as the project was coming
+        online in October 2025, when they reduced the project to a single
+        maintainer for standard operation. The telescope, which has been delayed
+        a few times for technical reasons unrelated to the SeeChange pipeline,
+        is taking data for calibration and testing. I still meet regularly with
+        the active maintainer, and the pipeline is in great working shape,
+        prepared for regular data flow.
+      </p>
+    </div>
+
+    <div class="footer-bar">
+      <p class="name">William Hohensee</p>
+      <div class="links">
+        <p>wjhohensee37@berkeley.edu</p>
+      </div>
+    </div>
+  </body>
+</html>
